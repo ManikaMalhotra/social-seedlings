@@ -43,7 +43,6 @@
 
 .postContainer689GalleryItemInfo li {
     display: inline-block;
-    /* font-size: 1.7rem; */
     font-weight: 600;
 }
 
@@ -70,6 +69,12 @@
     object-fit: cover;
 }
 
+@media screen and (max-width: 1560px) {
+    .postContainer689GalleryItem {
+        width: calc((85vw - 5rem)/3);
+    }
+}
+
 @media screen and (max-width: 600px) {
     .postContainer689GalleryItem {
         /* flex: 1 0 6rem; */
@@ -87,10 +92,3 @@
         margin: 0.1rem;
     }
 }
-
-/* @media screen and (max-width: 963px) {
-    .postContainer689GalleryItem {
-        width: 48%;
-        margin: 0.1rem;
-    }
-} */

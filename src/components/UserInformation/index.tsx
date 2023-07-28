@@ -68,7 +68,7 @@ export default function UserInformation({ username }: IUserInformationProps) {
 
     return (
         <>
-            <header className={styles.userInfo251Header}>
+            <header>
                 <div className={styles.userInfo251MainContainer}>
                     <ProfileInfoContainer />
                 </div>

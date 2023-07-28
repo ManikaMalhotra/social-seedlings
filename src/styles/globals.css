@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
 	--color-text: black;
 	--color-primary: white;
 	--color-secondary: #f5f5f5;
+	--font-family: 'Roboto', sans-serif;
 }
 
 .dark {
@@ -22,6 +25,7 @@
 body {
 	color: var(--color-text);
 	background-color: var(--color-primary);
+	font-family: var(--font-family);
 	margin: 0;
 }
 
@@ -33,7 +37,7 @@ input {
 	padding: 0;
 }
 
-p,
+/* p,
 span,
 a,
 div,
@@ -47,7 +51,7 @@ h2,
 h3,
 h4 {
 	font-family: 'Montserrat', sans-serif;
-}
+} */
 
 a {
 	text-decoration: none;

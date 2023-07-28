@@ -6,6 +6,7 @@ import Post from '@/components/Post'
 import { IPost } from '@/types/misc'
 import PostList from '@/components/PostList'
 import { IPostListProps, IPostProps } from '@/types/props'
+import UserInformation from '@/components/UserInformation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -80,7 +81,7 @@ export default function Home() {
 		<>
 			{/* <Post key={post.id} {...post}/> */}
 			{/* <div style={{display: "flex"}}> */}
-				<PostList posts={posts} />
+				<UserInformation username="Username" />
 			{/* </div> */}
 		</>
 	)

@@ -1,0 +1,96 @@
+.postContainer689ImgTag {
+    display: block;
+}
+
+/* .postGrid367Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.3rem;
+} */
+
+.postContainer689VisuallyHidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.postContainer689GalleryItem {
+    position: relative;
+    /* flex: 1 0 20rem; */
+    width: calc((100vw - 15rem)/3);
+    margin: 0.3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.postContainer689GalleryItem:hover .postContainer689GalleryItemInfo,
+.postContainer689GalleryItem:focus .postContainer689GalleryItemInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.postContainer689GalleryItemInfo {
+    display: none;
+}
+
+.postContainer689GalleryItemInfo li {
+    display: inline-block;
+    /* font-size: 1.7rem; */
+    font-weight: 600;
+}
+
+.postContainer689GalleryItemLikes {
+    margin-right: 2.2rem;
+}
+
+/* .postGrid367GalleryItemType {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+} */
+
+.fa-clone,
+.fa-comment {
+    transform: rotateY(180deg);
+}
+
+.postContainer689GalleryImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+    .postContainer689GalleryItem {
+        /* flex: 1 0 6rem; */
+        position: relative;
+        width: calc((100vw - 4rem)/3);
+        /* margin: 0.1rem; */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .postContainer689GalleryItem {
+        /* flex: 1 0 6rem; */
+        position: relative;
+        width: calc((100vw - 2.75rem)/3);
+        margin: 0.1rem;
+    }
+}
+
+/* @media screen and (max-width: 963px) {
+    .postContainer689GalleryItem {
+        width: 48%;
+        margin: 0.1rem;
+    }
+} */

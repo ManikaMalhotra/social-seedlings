@@ -4,8 +4,11 @@ export interface IPost {
     postImage: string;
     username: string;
     likesCount: number;
-    description: string;
-    location: string;
+    description: string | null;
+    location: string | null;
+    blurHash: string;
+    height: number;
+    width: number;
 };
 
 export interface IProfileImage {
@@ -25,3 +28,7 @@ export interface IUser {
     following_count: number;
     profile_image: IProfileImage;
 };
+
+export interface IErrorMessage {
+    message: string;
+}

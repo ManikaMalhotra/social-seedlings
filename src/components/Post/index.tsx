@@ -15,14 +15,14 @@ export default function Post({
                 <div className={styles.post234Header}>
                     <img className={styles.post234HeaderUserIconImg} src={userImage} />
                     <p className={styles.post234UserName}>{username}</p>
-                    <p className={styles.post234Location}>{location}</p>
+                    {location && <p className={styles.post234Location}>{location}</p>}
                 </div>
                 <div>
                     <img src={postImage} width="100%" />
                 </div>
                 <div className={styles.post234Description}>
                     <p className={styles.post234LikesCount}>{likesCount}</p>
-                    <p>{description}</p>
+                    {description && <p>{description}</p>}
                 </div>
             </div>
         </>

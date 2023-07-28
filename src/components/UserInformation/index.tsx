@@ -1,8 +1,5 @@
 import { IUserInformationProps } from "@/types/props";
-import styles from "./styles.module.css";
-import PostGrid from "./PostGrid";
-import ProfileInfoContainer from "./ProfileInfoContainer";
-// import styles from "@/styles/UserInformation.module.css";
+import styles from "@/styles/UserInformation.module.css";
 
 export default function UserInformation({ username }: IUserInformationProps) {
     const user = {
@@ -21,61 +18,9 @@ export default function UserInformation({ username }: IUserInformationProps) {
         }
     };
 
-    const posts = [
-        {
-            id: "1",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        },
-        {
-            id: "2",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        },
-        {
-            id: "3",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        },
-        {
-            id: "4",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        },
-        {
-            id: "5",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        },
-        {
-            id: "6",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        },
-        {
-            id: "7",
-            likesCount: 27843652,
-            commentsCount: 3643652,
-            imgUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop",
-        }
-    ];
-
     return (
         <>
-            <header className={styles.userInfo251Header}>
-                <div className={styles.userInfo251MainContainer}>
-                    <ProfileInfoContainer />
-                </div>
-            </header>
-            <main>
-                <PostGrid posts={posts}/>
-            </main>
+            
         </>
     );
 };

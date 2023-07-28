@@ -9,8 +9,8 @@ export interface IPostProps {
     postImage: string;
     username: string;
     likesCount: number;
-    description: string;
-    location: string;
+    description: string | null;
+    location: string | null;
 };
 
 export interface IPostListProps {

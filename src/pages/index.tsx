@@ -1,88 +1,50 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Post from '@/components/Post'
 import { IPost } from '@/types/misc'
 import PostList from '@/components/PostList'
-import { IPostListProps, IPostProps } from '@/types/props'
-import UserInformation from '@/components/UserInformation'
-
-const inter = Inter({ subsets: ['latin'] })
+import LoadingIndicator from '@/components/LoadingIndicator'
+import useIntersection from '@/hooks/useIntersection';
+import { useEffect } from 'react';
+import useSWRInfinite from 'swr/infinite'
 
 export default function Home() {
-	const posts: IPost[] = [
-		{
-			id: "1",
-			description: "This is a description",
-			likesCount: 27843652,
-			location: "New York",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username1"
+	const [isIntersecting, ref] = useIntersection<HTMLDivElement>();
+	const {
+		data, 
+		setSize,
+		error,
+		isLoading,
+		isValidating
+	} = useSWRInfinite<IPost[]> (
+		(pageIndex, previousPageData) => {
+			if (previousPageData && !previousPageData.length) return null
+			return `/api/posts?page=${pageIndex + 1}&limit=5`
 		},
-		{
-			id: "2",
-			description: "Some random description",
-			likesCount: 1276455,
-			location: "California",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username2"
-		},
-		{
-			id: "3",
-			description: "This is a description",
-			likesCount: 10986,
-			location: "France",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username3"
-		},
-		{
-			id: "3",
-			description: "This is a description",
-			likesCount: 10986,
-			location: "France",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username3"
-		},
-		{
-			id: "3",
-			description: "This is a description",
-			likesCount: 10986,
-			location: "France",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username3"
-		},
-		{
-			id: "3",
-			description: "This is a description",
-			likesCount: 10986,
-			location: "France",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username3"
-		},
-		{
-			id: "3",
-			description: "This is a description",
-			likesCount: 10986,
-			location: "France",
-			postImage: "https://picsum.photos/200",
-			userImage: "https://picsum.photos/200",
-			username: "Username3"
+		(url) => {
+			const data = fetch(url).then((res) => res.json())
+			return data
+		}, {
+			initialSize: 0,
+			revalidateAll: false,
+			parallel: false,
+			revalidateFirstPage: false,
+
 		}
-	];
+	)
+
+	useEffect(() => {
+		if (isIntersecting && !isLoading && !isValidating) {
+			setSize((size) => size + 1);
+		}
+	}, [isIntersecting, isLoading, isValidating])
+
+	const posts = data?.flat();
 
 	return (
 		<>
-			{/* <Post key={post.id} {...post}/> */}
-			{/* <div style={{display: "flex"}}> */}
-				<UserInformation username="Username" />
-			{/* </div> */}
+			{posts && <PostList posts={posts} />}
+			<div ref={ref}>
+				<LoadingIndicator />
+			</div>
 		</>
 	)
 }

@@ -1,6 +1,4 @@
-import useIntersection from '@/hooks/useIntersection'
-import styles from '@/styles/Header.module.css'
-import { useEffect } from 'react';
+import styles from '@/styles/Header.module.css';
 import ThemeToggleButton from '../ThemeToggleButton';
 
 export default function Header() {

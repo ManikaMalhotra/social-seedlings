@@ -1,4 +1,6 @@
+import useIntersection from '@/hooks/useIntersection'
 import styles from '@/styles/Header.module.css'
+import { useEffect } from 'react';
 
 export default function Header() {
     return (

@@ -1,3 +1,7 @@
+.userInfo251ProfileContainer {
+    padding-top: 120px;
+}
+
 .userInfo251MainContainer {
     max-width: 93.5rem;
     margin: 0 auto;
@@ -16,4 +20,10 @@
     border-radius: 50%;
     margin: 0 auto;
     animation: loader 500ms linear infinite;
+}
+
+@media only screen and (max-width: 500px) {
+    .userInfo251ProfileContainer {
+        padding-top: 70px;
+    }
 }

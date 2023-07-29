@@ -1,20 +1,20 @@
-import { IPost, IErrorMessage } from '@/types/misc'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { IErrorMessage, IPost } from '@/types/misc';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<IPost[] | IErrorMessage>
 ) {
     try {
-        const { page, limit } = req.query;
+        const { page, limit, username } = req.query;
 
         // Check if page and limit params are passed, otherwise return error
-        if (!page || !limit) {
-            return res.status(400).json({ message: 'Missing query params: page and limit required' });
+        if (!page || !limit || !username) {
+            return res.status(400).json({ message: 'Missing query params: page, limit and username required' });
         }
 
         //check if page and limit are strings
-        if (Array.isArray(page) || Array.isArray(limit)) {
+        if (Array.isArray(page) || Array.isArray(limit) || Array.isArray(username)) {
             return res.status(400).json({ message: 'Query params should be of type string' });
         }
 
@@ -30,7 +30,7 @@ export default async function handler(
         const clientId = process.env.UNSPLASH_ACCESS_KEY;
 
         // Fetch random photos from unsplash API
-        const response = await fetch(`${unsplashURI}/photos/?client_id=${clientId}&per_page=${limitNum}&page=${pageNum}`);
+        const response = await fetch(`${unsplashURI}/users/${username}/photos/?client_id=${clientId}&per_page=${limitNum}&page=${pageNum}`);
         const data = await response.json();
 
         const posts = data.map((post: any) => {
@@ -56,5 +56,4 @@ export default async function handler(
             res.status(500).json({ message: error.message });
         }
     }
-
-}
+};

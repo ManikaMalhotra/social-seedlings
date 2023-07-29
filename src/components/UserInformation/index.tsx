@@ -67,15 +67,11 @@ export default function UserInformation({ username }: IUserInformationProps) {
     ];
 
     return (
-        <>
-            <header>
-                <div className={styles.userInfo251MainContainer}>
-                    <ProfileInfoContainer />
-                </div>
-            </header>
-            <main>
-                <PostGrid posts={posts}/>
-            </main>
-        </>
+        <div className={styles.userInfo251ProfileContainer}>
+            <div className={styles.userInfo251MainContainer}>
+                <ProfileInfoContainer />
+            </div>
+            <PostGrid posts={posts}/>
+        </div>
     );
 };

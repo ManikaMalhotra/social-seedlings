@@ -7,7 +7,7 @@ export default function PostList({ posts }: IPostListProps) {
     const postElements = posts.map((post) => {
         return (
             <Post
-                key={post.id}
+                key={`${post.id}${Date.now()}`}
                 description={post.description}
                 likesCount={post.likesCount}
                 location={post.location}

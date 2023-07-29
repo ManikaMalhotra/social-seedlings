@@ -19,7 +19,7 @@
 .postContainer689GalleryItem {
     position: relative;
     /* flex: 1 0 20rem; */
-    width: calc((100vw - 15rem)/3);
+    width: calc((80vw - 15rem)/3);
     margin: 0.3rem;
     color: #fff;
     cursor: pointer;

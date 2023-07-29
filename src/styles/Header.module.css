@@ -2,7 +2,9 @@
     color: var(--color-text);
     background-color: var(--color-primary);
     height: 100px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .hdr852Container {

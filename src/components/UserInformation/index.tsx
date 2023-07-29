@@ -2,26 +2,27 @@ import { IUserInformationProps } from "@/types/props";
 import styles from "./styles.module.css";
 import PostGrid from "./PostGrid";
 import ProfileInfoContainer from "./ProfileInfoContainer";
+import ThemeToggleButton from "../ThemeToggleButton";
 // import styles from "@/styles/UserInformation.module.css";
 
-export default function UserInformation({ username }: IUserInformationProps) {
-    const user = {
-        "id": "pXhwzz1JtQU",
-        "username": "jimmyexample",
-        "name": "James Example",
-        "bio": "The user's bio",
-        "location": "Montreal, Qc",
-        "total_photos": 10,
-        "followers_count": 300,
-        "following_count": 25,
+export default function UserInformation({ user, posts }: IUserInformationProps) {
+    const user1 = {
+        "id": "mYizSrdJkkU",
+        "username": "neom",
+        "name": "NEOM",
+        "bio": "Located in the northwest of Saudi Arabia, NEOM’s diverse climate offers both sun-soaked beaches and snow-capped mountains. NEOM’s unique location will provide residents with enhanced livability while protecting 95% of the natural landscape.",
+        "location": "NEOM, Saudi Arabia",
         "profile_image": {
-            "small": "https://images.unsplash.com/face-springmorning.jpg?q=80&fm=jpg&crop=faces&fit=crop&h=32&w=32",
-            "medium": "https://images.unsplash.com/face-springmorning.jpg?q=80&fm=jpg&crop=faces&fit=crop&h=64&w=64",
-            "large": "https://images.unsplash.com/face-springmorning.jpg?q=80&fm=jpg&crop=faces&fit=crop&h=128&w=128"
-        }
+            "small": "https://images.unsplash.com/profile-1679489218992-ebe823c797dfimage?ixlib=rb-4.0.3&crop=faces&fit=crop&w=32&h=32",
+            "medium": "https://images.unsplash.com/profile-1679489218992-ebe823c797dfimage?ixlib=rb-4.0.3&crop=faces&fit=crop&w=64&h=64",
+            "large": "https://images.unsplash.com/profile-1679489218992-ebe823c797dfimage?ixlib=rb-4.0.3&crop=faces&fit=crop&w=128&h=128"
+        },
+        "total_photos": 202,
+        "followers_count": 491,
+        "following_count": 0
     };
 
-    const posts = [
+    const posts1 = [
         {
             id: "1",
             likesCount: 27843652,
@@ -66,12 +67,14 @@ export default function UserInformation({ username }: IUserInformationProps) {
         }
     ];
 
+    // console.log("userinfo index", posts);
+
     return (
         <div className={styles.userInfo251ProfileContainer}>
             <div className={styles.userInfo251MainContainer}>
-                <ProfileInfoContainer />
+                <ProfileInfoContainer user={user} />
             </div>
-            <PostGrid posts={posts}/>
+            <PostGrid posts={posts} />
         </div>
     );
 };

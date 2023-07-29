@@ -129,83 +129,27 @@ export default function Home() {
 			"height": 3641,
 			"width": 4969
 		}
-	]
+	];
 
 	const [isIntersecting, ref] = useIntersection<HTMLDivElement>();
-	// const {
-	// 	data, 
-	// 	size,
-	// 	setSize,
-	// 	error,
-	// 	isLoading,
-	// 	isValidating
-	// } = useSWRInfinite<IPost[]> (
-	// 	(pageIndex, previousPageData) => {
-	// 		if (previousPageData && !previousPageData.length) return null
-	// 		return `/api/posts?page=${pageIndex + 1}&limit=5`
-	// 	},
-	// 	(url) => {
-	// 		const cachedData = localStorage.getItem('posts')
-	// 		if(cachedData) {
-	// 			const posts = JSON.parse(cachedData)
-
-	// 			console.log(posts.length, size);
-
-	// 			if(posts.length > size) return posts
-	// 		}
-
-	// 		const data = fetch(url).then((res) => res.json())
-	// 		return data
-	// 	}, {
-	// 		initialSize: 1,
-	// 		revalidateAll: false,
-	// 		parallel: false,
-	// 		revalidateFirstPage: false,
-	// 		onSuccess(data) {
-	// 			// const cachedData = localStorage.getItem('posts')
-
-	// 			// if(cachedData) {
-	// 			// 	const posts = JSON.parse(cachedData)
-	// 			// 	if(data.length > posts.length) {
-	// 			// 		localStorage.setItem('posts', JSON.stringify(data))
-	// 			// 	}
-	// 			// } else {
-	// 			// 	localStorage.setItem('posts', JSON.stringify(data))
-	// 			// }
-	// 		}
-	// 	}
-	// )
-
-	// useEffect(() => {
-	// 	if (isIntersecting && !isLoading && !isValidating) {
-	// 		setSize((size) => size + 1);
-	// 	}
-	// }, [isIntersecting, isLoading, isValidating])
-
-	// useEffect(() => {
-	// 	console.log(data);
-	// }, [data])
-
-	// const posts = data?.flat();
 
 	useEffect(() => {
-		usePostsStore.persist.rehydrate()
-	}, [])
+		usePostsStore.persist.rehydrate();
+	}, []);
 
-	const getPage = usePostsStore((state) => state.getPage)
-	const posts = usePostsStore((state) => state.posts)
+	const getPage = usePostsStore((state) => state.getPage);
+	const posts = usePostsStore((state) => state.posts); // setting up subscriber
 
 	useEffect(() => {
 		if (isIntersecting && usePostsStore.persist.hasHydrated()) {
 			getPage().then((res) => {
-				console.log(res)
+				console.log(res);
 			})
-				.catch((err) => {
-					console.log(err)
-				})
+			.catch((err) => {
+				console.log(err);
+			});
 		}
-	}, [isIntersecting])
-
+	}, [isIntersecting]);
 
 	return (
 		<div className={styles.hm234PostContainer}>

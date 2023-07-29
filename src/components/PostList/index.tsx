@@ -1,5 +1,4 @@
 import Post from '@/components/Post';
-import { IPost } from '@/types/misc';
 import { IPostListProps } from '@/types/props';
 
 export default function PostList({ posts }: IPostListProps) {
@@ -17,6 +16,7 @@ export default function PostList({ posts }: IPostListProps) {
             />
         );
     });
+    
     return (
         <>
             {postElements}

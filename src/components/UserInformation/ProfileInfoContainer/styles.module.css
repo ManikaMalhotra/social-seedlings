@@ -12,6 +12,10 @@
 
 .profileInfo592Container {
     padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .profileInfo592Container::after {
@@ -22,11 +26,9 @@
 
 .profileInfo592Img {
     float: left;
-    width: calc(33.333% - 1rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 3rem;
 }
 
 .profileInfo592Img img {
@@ -36,7 +38,12 @@
 .profileInfo592Stats,
 .profileInfo592Bio {
     float: left;
-    width: calc(66.666% - 2rem);
+    width: 100%;
+}
+
+.profileInfo592Stats ul {
+    display: flex;
+    justify-content: space-between;
 }
 
 .profileInfo592UserSettings {
@@ -105,7 +112,6 @@
     .profileInfo592Bio,
     .profileInfo592Stats {
         float: none;
-        width: auto;
     }
 
     .profileInfo592Img img {

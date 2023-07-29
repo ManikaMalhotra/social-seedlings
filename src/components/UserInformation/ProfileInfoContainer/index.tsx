@@ -1,14 +1,14 @@
+import { IProfileInfoContainerProps } from '@/types/props';
 import styles from './styles.module.css';
 
-export default function ProfileInfoContainer() {
+export default function ProfileInfoContainer({ user }: IProfileInfoContainerProps) {
     return (
         <div className={styles.profileInfo592Container}>
-            <div className={styles.profileInfo592Img}>
-                <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="" className={styles.userInfo251ImgTag} />
-            </div>
-
             <div className={styles.profileInfo592UserSettings}>
-                <h1 className={styles.profileInfo592Username}>janedoe_</h1>
+            <div className={styles.profileInfo592Img}>
+                <img src={user.profile_image.large} alt="" className={styles.profileInfo592Img} />
+            </div>
+                <h1 className={styles.profileInfo592Username}>{user.username}</h1>
                 <button className={`${styles.profileInfo592Button} ${styles.profileInfo592EditProfileBtn}`}>Edit Profile</button>
                 <button className={`${styles.profileInfo592Button} ${styles.profileInfo592SettingsIcon}`} aria-label="profile settings">
                     <i className="fas fa-cog" aria-hidden="true"></i>
@@ -18,15 +18,15 @@ export default function ProfileInfoContainer() {
             <div className={styles.profileInfo592Stats}>
                 <ul>
                     <li>
-                        <span className={styles.profileInfo592StatCount}>164 </span>
-                         posts
+                        <span className={styles.profileInfo592StatCount}>{user.total_photos} </span>
+                        posts
                     </li>
                     <li>
-                        <span className={styles.profileInfo592StatCount}>188 </span>
-                         followers
+                        <span className={styles.profileInfo592StatCount}>{user.followers_count} </span>
+                        followers
                     </li>
                     <li>
-                        <span className={styles.profileInfo592StatCount}>206 </span>
+                        <span className={styles.profileInfo592StatCount}>{user.following_count} </span>
                         following
                     </li>
                 </ul>
@@ -34,9 +34,9 @@ export default function ProfileInfoContainer() {
             <div className={styles.profileInfo592Bio}>
                 <div>
                     <div className={styles.profileInfo592FullName}>
-                        Jane Doe
+                        {user.name}
                     </div>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️
+                    {user.bio}
                 </div>
             </div>
         </div>

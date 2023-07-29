@@ -1,5 +1,3 @@
-import { IPost } from "./misc";
-
 export interface IBaseLayoutProps {
     children: ReactNode;
 };
@@ -18,5 +16,18 @@ export interface IPostListProps {
 };
 
 export interface IUserInformationProps {
-    username: string;
+    user: IUser;
+    posts: IPost[];
+};
+
+export interface IProfileInfoContainerProps {
+    user: IUser;
+};
+
+export interface IPostGridProps {
+    posts: IPost[];
+};
+
+export interface IPostContainerProps {
+    post: IPost;
 };

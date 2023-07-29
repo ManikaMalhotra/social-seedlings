@@ -20,12 +20,12 @@ export const usePostsStore = create<PostsState>()(
             getPage:  async () => {
                 const page = get().page;
                 const prevPosts = get().posts;
-                const response = await fetch(`/api/posts?page=${page}&limit=10`)
-                const data = await response.json()
+                const response = await fetch(`/api/posts?page=${page}&limit=10`);
+                const data = await response.json();
                 set({ 
                     posts: [...prevPosts, ...data],
                     page: page + 1
-                })
+                });
             }
         }),
         {

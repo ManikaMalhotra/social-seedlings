@@ -29,6 +29,11 @@ export interface IUser {
     profile_image: IProfileImage;
 };
 
+export interface IUserProfile {
+    details: IUser;
+    posts: IPost[];
+};
+
 export interface IErrorMessage {
     message: string;
-}
+};

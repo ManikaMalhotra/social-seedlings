@@ -1,14 +1,14 @@
 import styles from './styles.module.css';
 import PostContainer from '../PostContainer';
+import { IPost } from '@/types/misc';
+import { IPostGridProps } from '@/types/props';
 
-export default function PostGrid({ posts }: any) {
-    const renderedPosts = posts.map((post: any) => {
+export default function PostGrid({ posts }: IPostGridProps) {
+    const renderedPosts = posts.map((post: IPost) => {
         return (
             <PostContainer
                 key={post.id}
-                imgUrl={post.imgUrl}
-                likesCount={post.likesCount}
-                commentsCount={post.commentsCount}
+                post={post}
             />
         );
     });

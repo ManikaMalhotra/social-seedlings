@@ -1,0 +1,44 @@
+.ttb645CheckboxContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ttb645Checkbox {
+    opacity: 0;
+}
+
+.ttb645CheckboxLabel {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ttb645MoonIcon {
+    color: #f1c40f;
+}
+
+.ttb645SunIcon {
+    color: #f39c12;
+}
+
+.ttb645CheckboxLabel .ttb645BallIcon {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.ttb645Checkbox:checked+.ttb645CheckboxLabel .ttb645BallIcon {
+    transform: translateX(24px);
+}

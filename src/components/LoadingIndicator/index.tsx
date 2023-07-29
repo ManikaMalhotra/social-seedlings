@@ -5,5 +5,5 @@ export default function LoadingIndicator(){
         <span className={styles.li253Wrapper}>
             <div className={styles.li253LoadingIndicator} />
         </span>
-    ) 
+    );
 }

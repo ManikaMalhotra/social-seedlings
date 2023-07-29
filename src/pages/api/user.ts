@@ -28,11 +28,11 @@ export default async function handler (
             name: data.name,
             bio: data.bio,
             location: data.location,
-            profile_image: data.profile_image.medium,
+            profile_image: data.profile_image,
             total_photos: data.total_photos,
             followers_count: data.followers_count,
             following_count: data.following_count
-        } as IUser;
+        };
 
         res.status(200).json(user);
     } catch (error) {

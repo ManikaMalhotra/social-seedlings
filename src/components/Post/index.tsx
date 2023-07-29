@@ -21,7 +21,7 @@ export default function Post({
                     <img src={postImage} width="100%" />
                 </div>
                 <div className={styles.post234Description}>
-                    <p className={styles.post234LikesCount}>{likesCount}</p>
+                    <p className={styles.post234LikesCount}>{likesCount} likes</p>
                     {description && <p>{description}</p>}
                 </div>
             </div>

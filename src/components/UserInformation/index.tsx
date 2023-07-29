@@ -1,7 +1,7 @@
 import { IUserInformationProps } from "@/types/props";
-import styles from "./styles.module.css";
-import PostGrid from "./PostGrid";
-import ProfileInfoContainer from "./ProfileInfoContainer";
+import styles from "@/styles/UserInformation.module.css";
+import PostGrid from "../PostGrid";
+import ProfileInfoContainer from "../ProfileInfoContainer";
 import ThemeToggleButton from "../ThemeToggleButton";
 // import styles from "@/styles/UserInformation.module.css";
 

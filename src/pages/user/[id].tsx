@@ -1,5 +1,5 @@
 import UserInformation from "@/components/UserInformation";
-import { useUserStore } from "@/components/store/user";
+import { useUserStore } from "@/store/user";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect } from "react";
 

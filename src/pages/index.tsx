@@ -5,7 +5,7 @@ import LoadingIndicator from '@/components/LoadingIndicator'
 import useIntersection from '@/hooks/useIntersection';
 import { useEffect, useState } from 'react';
 import useSWRInfinite from 'swr/infinite'
-import { usePostsStore } from '@/components/store/posts';
+import { usePostsStore } from '@/store/posts';
 
 export default function Home() {
 	const postStatic = [

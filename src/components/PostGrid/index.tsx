@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from '@/styles/PostGrid.module.css';
 import PostContainer from '../PostContainer';
 import { IPost } from '@/types/misc';
 import { IPostGridProps } from '@/types/props';

@@ -1,5 +1,5 @@
 import { IProfileInfoContainerProps } from '@/types/props';
-import styles from './styles.module.css';
+import styles from '@/styles/ProfileInfoContainer.module.css';
 
 export default function ProfileInfoContainer({ user }: IProfileInfoContainerProps) {
     return (

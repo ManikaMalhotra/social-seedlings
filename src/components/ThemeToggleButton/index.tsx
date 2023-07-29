@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from '@/styles/ThemeToggleButton.module.css';
 import { BsSun, BsMoon } from 'react-icons/bs';
 
 export default function ThemeToggleButton() {

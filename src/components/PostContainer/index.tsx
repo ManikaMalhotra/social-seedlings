@@ -1,5 +1,5 @@
 import { IPostContainerProps } from "@/types/props";
-import styles from "./styles.module.css";
+import styles from "@/styles/PostContainer.module.css";
 
 export default function PostContainer({ post }: IPostContainerProps) {
     return (

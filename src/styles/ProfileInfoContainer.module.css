@@ -29,6 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0.5rem;
 }
 
 .profileInfo592Img img {
@@ -49,7 +50,8 @@
 .profileInfo592UserPicName {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 40%;
+    justify-content: space-around;
 }
 
 .profileInfo592Username {
@@ -113,23 +115,11 @@
         margin-top: 1rem;
     }
 
-    .profileInfo592EditProfileBtn {
-        order: 1;
-        padding: 0;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .profileInfo592EditProfileBtn {
-        margin-left: 0;
-    }
-
     .profileInfo592Bio {
         margin-top: 1.5rem;
         font-size: 12px;
     }
 
-    .profileInfo592EditProfileBtn,
     .profileInfo592Bio,
     .profileInfo592Stats {
         flex-basis: 100%;

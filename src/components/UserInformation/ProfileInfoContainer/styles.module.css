@@ -46,7 +46,7 @@
     justify-content: space-between;
 }
 
-.profileInfo592UserSettings {
+.profileInfo592UserPicName {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,18 +55,6 @@
 .profileInfo592Username {
     display: inline-block;
     font-weight: 300;
-}
-
-.profileInfo592EditProfileBtn {
-    line-height: 1.8;
-    border: 0.1rem solid #dbdbdb;
-    border-radius: 0.3rem;
-    padding: 0 2.4rem;
-    margin-left: 2rem;
-}
-
-.profileInfo592SettingsIcon {
-    margin-left: 1rem;
 }
 
 .profileInfo592Stats {
@@ -108,7 +96,7 @@
     }
 
     .profileInfo592Img,
-    .profileInfo592UserSettings,
+    .profileInfo592UserPicName,
     .profileInfo592Bio,
     .profileInfo592Stats {
         float: none;
@@ -118,7 +106,7 @@
         width: 7.7rem;
     }
 
-    .profileInfo592UserSettings {
+    .profileInfo592UserPicName {
         flex-basis: calc(100% - 10.7rem);
         display: flex;
         flex-wrap: wrap;

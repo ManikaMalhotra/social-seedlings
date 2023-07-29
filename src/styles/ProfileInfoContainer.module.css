@@ -84,7 +84,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 640px) {
     .profileInfo592Container {
         display: flex;
         flex-wrap: wrap;
@@ -126,6 +126,7 @@
 
     .profileInfo592Bio {
         margin-top: 1.5rem;
+        font-size: 12px;
     }
 
     .profileInfo592EditProfileBtn,
@@ -140,11 +141,12 @@
     }
 
     .profileInfo592Stats ul {
+        font-size: 14px;
         display: flex;
         text-align: center;
-        padding: 1.2rem 0;
-        border-top: 0.1rem solid #dadada;
-        border-bottom: 0.1rem solid #dadada;
+        padding: 1rem 0;
+        border-top: 0.1rem solid var(--gray-170);
+        border-bottom: 0.1rem solid var(--gray-170);
     }
 
     .profileInfo592Stats li {

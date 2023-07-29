@@ -8,7 +8,7 @@
 }
 
 .ttb645CheckboxLabel {
-    background-color: #111;
+    background-color: var(--color-text);
     width: 50px;
     height: 26px;
     border-radius: 50px;
@@ -21,15 +21,15 @@
 }
 
 .ttb645MoonIcon {
-    color: #f1c40f;
+    color: var(--color-primary);
 }
 
 .ttb645SunIcon {
-    color: #f39c12;
+    color: var(--color-primary);
 }
 
 .ttb645CheckboxLabel .ttb645BallIcon {
-    background-color: #fff;
+    background-color: var(--color-secondary);
     width: 22px;
     height: 22px;
     position: absolute;

@@ -8,20 +8,6 @@
     padding: 0 12rem;
 }
 
-.userInfo251Button:focus {
-    outline: 0.5rem auto #4d90fe;
-}
-
-.loader {
-    width: 5rem;
-    height: 5rem;
-    border: 0.6rem solid #999;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    margin: 0 auto;
-    animation: loader 500ms linear infinite;
-}
-
 @media only screen and (max-width: 768px) {
     .userInfo251MainContainer {
         padding: 0 5rem;

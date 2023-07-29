@@ -6,7 +6,7 @@
 }
 
 .li253LoadingIndicator {
-	border: 5px solid #aaa;
+	border: 5px solid var(--gray-170);
 	width: 45px;
 	height: 45px;
 	border-radius: 50%;

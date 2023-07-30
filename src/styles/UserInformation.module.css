@@ -1,8 +1,9 @@
 .userInfo251MainContainer {
     /* max-width: 93.5rem; */
-    max-width: calc(100% - 6vw);
+    max-width: calc(100% - 20vw);
     margin: 0 auto;
     padding: 0 12rem;
+    margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -19,6 +20,7 @@
 
 @media only screen and (max-width: 500px) {
     .userInfo251MainContainer {
+        max-width: 100%;
         padding: 0 1rem;
     }
 }

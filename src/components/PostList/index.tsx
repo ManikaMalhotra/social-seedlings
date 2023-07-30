@@ -25,17 +25,7 @@ export default function PostList({
                 ref={(idx + 1 === posts.length - 10) && !username ? scrollRef : null} 
                 key={`${post.id}${Date.now()}`}
             >
-                <Post
-                    description={post.description}
-                    likesCount={post.likesCount}
-                    location={post.location}
-                    postImage={post.postImage}
-                    userImage={post.userImage}
-                    username={post.username}
-                    blurHash={post.blurHash}
-                    height={post.height}
-                    width={post.width}
-                />
+                <Post post={post}/>
             </div>
         );
     });

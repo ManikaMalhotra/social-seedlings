@@ -3,15 +3,7 @@ export interface IBaseLayoutProps {
 };
 
 export interface IPostProps {
-    userImage: string;
-    postImage: string;
-    username: string;
-    likesCount: number;
-    description: string | null;
-    location: string | null;
-    blurHash: string;
-    height: number;
-    width: number;
+    post: IPost;
 };
 
 export interface IPostListProps {
@@ -45,3 +37,7 @@ export interface IViewButtonProps {
     view: boolean;
     setView: Dispatch<SetStateAction<boolean>>;
 };
+
+interface IPostImageProps {
+    post: IPost;
+}

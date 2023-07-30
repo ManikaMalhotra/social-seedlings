@@ -5,6 +5,7 @@ import BaseLayout from '@/components/Layouts/Base'
 import Post from '@/components/Post'
 import { useGlobalStore } from '@/store/global'
 import { useEffect } from 'react'
+import ScrollToTopButton from '@/components/ScrollToTopButton'
 
 export default function App({ Component, pageProps }: AppProps) {
 	const isDarkMode = useGlobalStore(state => state.darkMode);
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			</Head>
 			<BaseLayout>
 				<Component {...pageProps} />
+				<ScrollToTopButton />
 			</BaseLayout>
 		</>
 	)

@@ -44,7 +44,7 @@
 
 .profileInfo592Stats ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .profileInfo592UserPicName {

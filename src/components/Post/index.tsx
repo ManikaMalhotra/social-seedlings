@@ -1,5 +1,6 @@
 import styles from '@/styles/Post.module.css';
 import { IPostProps } from '@/types/props';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Post({ 
@@ -8,7 +9,10 @@ export default function Post({
     location, 
     postImage, 
     userImage, 
-    username 
+    username, 
+    blurHash,
+    height,
+    width
 }: IPostProps) {
     return (
         <>
@@ -20,8 +24,8 @@ export default function Post({
                     </Link>
                     {location && <p className={styles.post234Location}>{location}</p>}
                 </div>
-                <div>
-                    <img src={postImage} width="100%" />
+                <div style={{position: "relative", height: 'auto',minWidth: '350px', aspectRatio: '9/12'}}>
+                    <Image src={postImage} alt={`${username}`} placeholder='blur' blurDataURL={`${blurHash}`} layout="fill" objectFit='contain'/>
                 </div>
                 <div className={styles.post234Description}>
                     <p className={styles.post234LikesCount}>{likesCount} likes</p>

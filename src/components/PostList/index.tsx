@@ -32,6 +32,9 @@ export default function PostList({
                     postImage={post.postImage}
                     userImage={post.userImage}
                     username={post.username}
+                    blurHash={post.blurHash}
+                    height={post.height}
+                    width={post.width}
                 />
             </div>
         );

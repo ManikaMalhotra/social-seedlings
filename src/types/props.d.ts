@@ -9,6 +9,9 @@ export interface IPostProps {
     likesCount: number;
     description: string | null;
     location: string | null;
+    blurHash: string;
+    height: number;
+    width: number;
 };
 
 export interface IPostListProps {
@@ -36,4 +39,9 @@ export interface IPostGridProps {
 
 export interface IPostContainerProps {
     post: IPost;
+};
+
+export interface IViewButtonProps {
+    view: boolean;
+    setView: Dispatch<SetStateAction<boolean>>;
 };

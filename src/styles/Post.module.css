@@ -30,6 +30,10 @@
     width: 100%;
 }
 
+.post234DescriptionPara {
+    word-wrap: break-word;
+}
+
 .post234Description {
     padding: 10px;
 }

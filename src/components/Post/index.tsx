@@ -39,7 +39,7 @@ export default function Post({ post }: IPostProps) {
                 </div>
                 <div className={styles.post234Description}>
                     <p className={styles.post234LikesCount}>{post.likesCount} likes</p>
-                    {!!post.description && <p>{post.description}</p>}
+                    {!!post.description && <p className={styles.post234DescriptionPara}>{post.description}</p>}
                 </div>
             </div>
         </>

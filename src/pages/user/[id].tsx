@@ -21,7 +21,7 @@ export default function UserPage() {
             console.error(err);
         });
 
-        getUserPosts(id as string, 1)
+        getUserPosts(id as string)
         .then((res) => {
             console.log(res);
         })
@@ -35,7 +35,7 @@ export default function UserPage() {
 
     return (
         <>
-            {user && <UserInformation user={user} posts={posts} />}
+            {user && <UserInformation user={user} posts={posts} getUserPosts={getUserPosts}/>}
         </>
     );
 }

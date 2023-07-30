@@ -3,8 +3,25 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import BaseLayout from '@/components/Layouts/Base'
 import Post from '@/components/Post'
+import { useGlobalStore } from '@/store/global'
+import { useEffect } from 'react'
 
 export default function App({ Component, pageProps }: AppProps) {
+	const isDarkMode = useGlobalStore(state => state.darkMode);
+
+	useEffect(() => {
+		useGlobalStore.persist.rehydrate();
+	}, []);
+
+	useEffect(() => {
+		console.log('isDarkMode', isDarkMode);
+        if (isDarkMode) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    }, [isDarkMode]);
+
 	return (
 		<>
 			<Head>

@@ -13,7 +13,7 @@
 .postGrid367Gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: auto;
     padding-bottom: 3rem;
 }

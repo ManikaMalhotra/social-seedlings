@@ -20,7 +20,14 @@ export default async function handler (
         const clientId = process.env.UNSPLASH_ACCESS_KEY;
 
         const response = await fetch(`${unsplashURI}/users/${username}/?client_id=${clientId}`);
+        
+        if(!response.ok) {
+            const message = await response.text();
+            return res.status(response.status).json({ message });
+        }
+
         const data = await response.json();
+
 
         const user: IUser = {
             id: data.id,

@@ -5,6 +5,7 @@
 .postContainer689GalleryItem {
     position: relative;
     width: calc((80vw - 15rem)/3);
+    aspect-ratio: 1;
     margin: 0.3rem;
     color: var(--color-primary);
     cursor: pointer;

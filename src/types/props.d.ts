@@ -13,11 +13,16 @@ export interface IPostProps {
 
 export interface IPostListProps {
     posts: IPost[];
+    getPage: () => Promise<void>;
+    username?: string;
+    checkHydration?: () => boolean;
+    rehydrate?: () => Promise<void> | void;
 };
 
 export interface IUserInformationProps {
     user: IUser;
     posts: IPost[];
+    getUserPosts: (usename?: string) => Promise<void>;
 };
 
 export interface IProfileInfoContainerProps {
@@ -26,6 +31,7 @@ export interface IProfileInfoContainerProps {
 
 export interface IPostGridProps {
     posts: IPost[];
+    getUserPosts: (usename?: string) => Promise<void>;
 };
 
 export interface IPostContainerProps {

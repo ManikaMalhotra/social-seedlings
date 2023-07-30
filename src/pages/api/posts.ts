@@ -31,6 +31,12 @@ export default async function handler(
 
         // Fetch random photos from unsplash API
         const response = await fetch(`${unsplashURI}/photos/?client_id=${clientId}&per_page=${limitNum}&page=${pageNum}`);
+
+        if(!response.ok) {
+            const message = await response.text();
+            return res.status(response.status).json({ message });
+        }
+
         const data = await response.json();
 
         const posts = data.map((post: any) => {

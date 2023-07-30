@@ -1,3 +1,10 @@
 .base734Main {
     background-color: var(--color-secondary);
+    padding-top: 120px;
+}
+
+@media only screen and (max-width: 800px) {
+    .base734Main {
+        padding-top: 70px;
+    }
 }

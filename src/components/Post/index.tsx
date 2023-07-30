@@ -1,5 +1,6 @@
 import styles from '@/styles/Post.module.css';
 import { IPostProps } from '@/types/props';
+import Link from 'next/link';
 
 export default function Post({ 
     description, 
@@ -14,7 +15,9 @@ export default function Post({
             <div className={styles.post234Container}>
                 <div className={styles.post234Header}>
                     <img className={styles.post234HeaderUserIconImg} src={userImage} />
-                    <p className={styles.post234UserName}>{username}</p>
+                    <Link href={`/user/${username}`}>
+                        <p className={styles.post234UserName}>{username}</p>
+                    </Link>
                     {location && <p className={styles.post234Location}>{location}</p>}
                 </div>
                 <div>

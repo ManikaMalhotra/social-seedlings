@@ -1,3 +1,7 @@
+div > .post234Container {
+    min-width: 350px;
+}
+
 .post234Container {
     margin: 20px auto 0 auto;
     border: 1px solid var(--gray-170);
@@ -7,6 +11,7 @@
     background: var(--color-primary);
     font-size: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    min-width: 350px;
 }
 
 .post234Header {

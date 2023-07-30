@@ -38,6 +38,10 @@ export interface IViewButtonProps {
     setView: Dispatch<SetStateAction<boolean>>;
 };
 
-interface IPostImageProps {
+export interface IPostImageProps {
     post: IPost;
+};
+
+export interface IActionsBarProps {
+    isLiked: boolean;
 }

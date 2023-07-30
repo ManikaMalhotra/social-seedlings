@@ -9,6 +9,7 @@ export interface IPost {
     blurHash: string;
     height: number;
     width: number;
+    isLiked: boolean;
 };
 
 export interface IProfileImage {

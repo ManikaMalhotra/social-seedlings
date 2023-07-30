@@ -2,14 +2,10 @@ import styles from '@/styles/Post.module.css';
 import { IPostProps } from '@/types/props';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { Blurhash } from 'react-blurhash';
 import PostImage from '../PostImage';
+import ActionsBar from '../ActionsBar';
 
 export default function Post({ post }: IPostProps) {
-
-    console.log(post);
-
     return (
         <>
             <div className={styles.post234Container}>
@@ -37,6 +33,7 @@ export default function Post({ post }: IPostProps) {
                 }}>
                     <PostImage post={post} />
                 </div>
+                <ActionsBar />
                 <div className={styles.post234Description}>
                     <p className={styles.post234LikesCount}>{post.likesCount} likes</p>
                     {!!post.description && <p className={styles.post234DescriptionPara}>{post.description}</p>}

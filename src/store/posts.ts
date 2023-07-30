@@ -7,7 +7,7 @@ type PostsState = {
     page: number,
     setPosts: (posts: IPost[]) => void,
     getPosts: () => IPost[],
-    getPage: () => Promise<void>
+    getPage: () => Promise<void>,
 }
 
 export const usePostsStore = create<PostsState>()(

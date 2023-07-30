@@ -1,0 +1,30 @@
+.actions734ActionBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 2.5rem;
+    background-color: var(--color-primary);
+}
+
+.actions734ActionBarItem {
+    display: flex;
+    align-items: center;
+}
+
+.actions734ActionBarItem:hover {
+    cursor: pointer;
+}
+
+.actions734ActionBarItemIcon {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    font-weight: 500;
+}
+
+.actions734ActionBarItemText {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: inherit;
+}

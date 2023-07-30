@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/common/Header";
 import styles from "@/styles/BaseLayout.module.css";
 import { IBaseLayoutProps } from "@/types/props";
 

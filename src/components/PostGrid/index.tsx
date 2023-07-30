@@ -2,7 +2,7 @@ import styles from '@/styles/PostGrid.module.css';
 import PostGridView from '../PostGridView';
 import { IPost } from '@/types/misc';
 import { IPostGridProps } from '@/types/props';
-import LoadingIndicator from '../LoadingIndicator';
+import LoadingIndicator from '../../common/LoadingIndicator';
 import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 import { NextRouter, useRouter } from 'next/router';
 

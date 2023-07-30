@@ -2,7 +2,7 @@ import Post from '@/components/Post';
 import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 import { IPost } from '@/types/misc';
 import { IPostListProps } from '@/types/props';
-import LoadingIndicator from '../LoadingIndicator';
+import LoadingIndicator from '../../common/LoadingIndicator';
 
 export default function PostList({ 
     posts, 

@@ -1,11 +1,8 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import BaseLayout from '@/components/Layouts/Base'
-import Post from '@/components/Post'
-import { useGlobalStore } from '@/store/global'
-import { useEffect } from 'react'
-import ScrollToTopButton from '@/common/ScrollToTopButton'
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import BaseLayout from '@/components/Layouts/Base';
+import ScrollToTopButton from '@/common/ScrollToTopButton';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (

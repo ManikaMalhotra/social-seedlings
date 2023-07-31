@@ -1,4 +1,3 @@
-import { IPost } from "@/types/misc";
 import { useState } from "react";
 import { Blurhash } from "react-blurhash";
 import Image from "next/image";

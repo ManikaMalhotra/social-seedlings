@@ -35,6 +35,13 @@ export interface IUserProfile {
     posts: IPost[];
 };
 
-export interface IErrorMessage {
+export interface IErrorMessage extends Error {
     message: string;
+    status?: number;
 };
+
+
+interface IErrorState {
+    message: string,
+    status?: number
+}

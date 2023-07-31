@@ -8,21 +8,6 @@ import { useEffect } from 'react'
 import ScrollToTopButton from '@/common/ScrollToTopButton'
 
 export default function App({ Component, pageProps }: AppProps) {
-	const isDarkMode = useGlobalStore(state => state.darkMode);
-
-	useEffect(() => {
-		useGlobalStore.persist.rehydrate();
-	}, []);
-
-	useEffect(() => {
-		console.log('isDarkMode', isDarkMode);
-        if (isDarkMode) {
-            document.body.classList.add('dark');
-        } else {
-            document.body.classList.remove('dark');
-        }
-    }, [isDarkMode]);
-
 	return (
 		<>
 			<Head>

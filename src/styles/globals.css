@@ -29,6 +29,9 @@ body {
 	background-color: var(--color-primary);
 	font-family: var(--font-family);
 	margin: 0;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 button,
@@ -43,4 +46,8 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	color: var(--color-text);
+}
+
+.hidden {
+	display: none;
 }

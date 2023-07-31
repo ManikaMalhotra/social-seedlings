@@ -5,7 +5,7 @@ div > .post234Container {
 .post234Container {
     margin: 20px auto 0 auto;
     border: 1px solid var(--gray-170);
-    border-radius: 2px;
+    border-radius: 10px;
     width: 100%;
     max-width: 420px;
     background: var(--color-primary);
@@ -26,6 +26,7 @@ div > .post234Container {
 
 .post234UserName {
     font-weight: bold;
+    font-size: 16px;
     margin-left: 10px;
 
 }
@@ -46,6 +47,7 @@ div > .post234Container {
 
 .post234LikesCount {
     font-weight: bold;
+    font-size: 14px;
 }
 
 .post234ActionIconsHolder {

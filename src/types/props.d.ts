@@ -12,6 +12,8 @@ export interface IPostListProps {
     username?: string;
     checkHydration?: () => boolean;
     rehydrate?: () => Promise<void> | void;
+    getCache?: () => void;
+    error: IErrorState | null;
 };
 
 export interface IUserInformationProps {

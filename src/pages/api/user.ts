@@ -9,11 +9,11 @@ export default async function handler (
         const { username } = req.query;
 
         if (!username) {
-            return res.status(400).json({ message: 'Missing query params: username required' });
+            return res.status(400).json({ message: 'Missing query params: username required' } as IErrorMessage);
         }
 
         if (Array.isArray(username)) {
-            return res.status(400).json({ message: 'Query params should be of type string' });
+            return res.status(400).json({ message: 'Query params should be of type string' } as IErrorMessage);
         }
 
         const unsplashURI = process.env.UNSPLASH_API_URL;
@@ -23,7 +23,7 @@ export default async function handler (
         
         if(!response.ok) {
             const message = await response.text();
-            return res.status(response.status).json({ message });
+            return res.status(response.status).json({ message } as IErrorMessage);
         }
 
         const data = await response.json();
@@ -45,7 +45,7 @@ export default async function handler (
     } catch (error) {
         console.log(error);
         if (error instanceof Error) {
-            res.status(500).json({ message: error.message });
+            res.status(500).json({ message: error.message } as IErrorMessage);
         }
     }
 };

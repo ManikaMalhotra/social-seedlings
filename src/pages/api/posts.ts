@@ -10,12 +10,12 @@ export default async function handler(
 
         // Check if page and limit params are passed, otherwise return error
         if (!page || !limit) {
-            return res.status(400).json({ message: 'Missing query params: page and limit required' });
+            return res.status(400).json({ message: 'Missing query params: page and limit required' } as IErrorMessage);
         }
 
         //check if page and limit are strings
         if (Array.isArray(page) || Array.isArray(limit)) {
-            return res.status(400).json({ message: 'Query params should be of type string' });
+            return res.status(400).json({ message: 'Query params should be of type string' } as IErrorMessage);
         }
 
         // Convert params to number
@@ -23,7 +23,7 @@ export default async function handler(
         const limitNum = Number(limit);
 
         if (isNaN(pageNum) || isNaN(limitNum)) {
-            return res.status(400).json({ message: 'Query params should be of type number' });
+            return res.status(400).json({ message: 'Query params should be of type number' } as IErrorMessage);
         }
 
         const unsplashURI = process.env.UNSPLASH_API_URL;
@@ -34,7 +34,7 @@ export default async function handler(
 
         if(!response.ok) {
             const message = await response.text();
-            return res.status(response.status).json({ message });
+            return res.status(response.status).json({ message } as IErrorMessage);
         }
 
         const data = await response.json();
@@ -59,7 +59,7 @@ export default async function handler(
 
         console.log(error);
         if(error instanceof Error) {
-            res.status(500).json({ message: error.message });
+            res.status(500).json({ message: error.message } as IErrorMessage);
         }
     }
 

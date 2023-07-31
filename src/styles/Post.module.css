@@ -1,4 +1,4 @@
-div > .post234Container {
+div>.post234Container {
     min-width: 350px;
 }
 
@@ -53,4 +53,13 @@ div > .post234Container {
 .post234ActionIconsHolder {
     padding: 10px;
     display: flex;
+}
+
+@media only screen and (max-width: 450px) {
+    .post234Container {
+        border: 1px solid var(--gray-170);
+        border-left: none;
+        border-right: none;
+        /* border-radius: 10px; */
+    }
 }

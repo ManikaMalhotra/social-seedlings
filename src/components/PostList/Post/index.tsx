@@ -2,8 +2,8 @@ import styles from '@/styles/Post.module.css';
 import { IPostProps } from '@/types/props';
 import Image from 'next/image';
 import Link from 'next/link';
-import PostImage from '../PostImage';
-import ActionsBar from '../ActionsBar';
+import PostImage from '@/common/PostImage';
+import ActionsBar from './ActionsBar';
 
 export default function Post({ post }: IPostProps) {
     return (

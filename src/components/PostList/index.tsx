@@ -1,4 +1,4 @@
-import Post from '@/components/Post';
+import Post from '@/components/PostList/Post';
 import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 import { IPost } from '@/types/misc';
 import { IPostListProps } from '@/types/props';

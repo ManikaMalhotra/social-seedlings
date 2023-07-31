@@ -1,6 +1,6 @@
 import { IPostContainerProps } from "@/types/props";
 import styles from "@/styles/PostContainer.module.css";
-import PostImage from "../PostImage";
+import PostImage from "@/common/PostImage";
 
 export default function PostContainer({ post }: IPostContainerProps) {
     return (

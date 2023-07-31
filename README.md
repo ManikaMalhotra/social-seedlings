@@ -1,38 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Social Seedlings <img src="https://github.com/ManikaMalhotra/social-seedlings/assets/78276488/04e42df9-dce0-42da-9a25-a2d06c2412a8" width="24" />
 
-## Getting Started
+Welcome to the <a href="https://social-seedlings-eight.vercel.app/" target="_blank">Social Seedlings</a> repository!
 
-First, run the development server:
+## Pages
+This project is a web application that provides a News Feed and Profile section for viewing and interacting with photos. Below you will find information on how to use the application, its features, and the folder structure.
+- News Feed: Fetches 10 random photos with infinite scroll. The API response contains user details, photo URLs for different resolutions, location, number of likes, and other useful data points about a feed.
+- Profile Section: Clicking on the User Info section redirects to the respective user's profile page. The application fetches user details based on the username from the provided API and displays all the photos added by the user along with photo descriptions in a grid structure view. It also provides an option to switch to the list view using the component created for the news feed to show the list view of the selected image.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Screenshots
+![Screenshot 2023-07-31 175100](https://github.com/ManikaMalhotra/social-seedlings/assets/78276488/beb5e4b8-2cf0-4795-bbbc-0700d0b9cdb9)
+![Screenshot 2023-07-31 175135](https://github.com/ManikaMalhotra/social-seedlings/assets/78276488/296aa054-091a-4108-86e3-88f30e4c51df)
+
+## How to run locally
+To use this project, follow these steps:
+- Clone the repository
+```bash 
+git clone https://github.com/ManikaMalhotra/social-seedlings.git
+cd social-seedlings
 ```
+- Create an API Key on [Unsplash](https://unsplash.com/developers)
+-  Add the keys to environment variables:
+>.env.local
+```env
+UNSPLASH_ACCESS_KEY=your_access_key
+UNSPLASH_SECRET_KEY=your_secret_key
+UNSPLASH_API_URL=https://api.unsplash.com
+```
+- Install dependencies and run the server
+```bash
+npm install
+npm run dev
+```
+- Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- Dynamic Routing: The application's routing is dynamically configured, allowing smooth navigation between different sections.
+- Zustand for State Management: Zustand is used as the state management library to efficiently manage and share states across components.
+- API Response Caching: The application caches the API response for a certain amount of time after the initial load, enhancing performance and reducing unnecessary API calls.
+- Loading/Empty/Error States: All loading, empty, and error states are properly handled for all cases, providing a seamless user experience.
+- Responsive and Mobile Friendly: The UI is designed to be responsive and mobile-friendly, ensuring a great user experience across different devices. 
+- Native CSS: The project does not rely on any UI libraries like Tailwind or Bootstrap; instead, it uses native CSS for styling.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Additional Features
+- Lazy Loading of Images: All images outside of the viewport are lazy-loaded, optimizing the page load time.
+- Blurhash Placeholder Technique: The application uses the Blurhash technique for images, providing a placeholder that is displayed while the actual image is loading. This improves perceived performance and enhances user experience.
+- Dark/Light Mode: The application supports both dark and light modes, allowing users to switch between themes according to their preference.
+- Scroll to Top Button: A scroll-to-top button is implemented to allow users to easily return to the top of the page with a single click.
+- Custom Hook for Infinite Scroll: The project includes a custom hook for infinite scroll functionality, ensuring a smooth and efficient scrolling experience while browsing the News Feed.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Folder Structure
+The project follows a standard and well-defined folder structure to organize its components, styles, hooks, and other assets. The structure is as follows:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot 2023-07-31 175334](https://github.com/ManikaMalhotra/social-seedlings/assets/78276488/a9f823ba-25a9-4cc3-be4b-ea008b68b4fe)

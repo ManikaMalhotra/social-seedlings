@@ -20,6 +20,7 @@ export interface IUserInformationProps {
     user: IUser;
     posts: IPost[];
     getUserPosts: (usename?: string) => Promise<void>;
+    error: IErrorState | null;
 };
 
 export interface IProfileInfoContainerProps {
@@ -29,6 +30,7 @@ export interface IProfileInfoContainerProps {
 export interface IPostGridProps {
     posts: IPost[];
     getUserPosts: (usename?: string) => Promise<void>;
+    error: IErrorState | null;
 };
 
 export interface IPostContainerProps {

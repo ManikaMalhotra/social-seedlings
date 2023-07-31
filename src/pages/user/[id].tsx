@@ -32,11 +32,11 @@ export default function UserPage() {
 
     const user = useUserStore(state => state.details);
     const posts = useUserStore(state => state.posts);
-    // const error = useUserStore(state => state.error);
+    const error = useUserStore(state => state.error);
 
     return (
         <>
-            {user && <UserInformation user={user} posts={posts} getUserPosts={getUserPosts}/>}
+            {user && <UserInformation error={error} user={user} posts={posts} getUserPosts={getUserPosts}/>}
         </>
     );
 }

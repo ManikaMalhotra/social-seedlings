@@ -26,7 +26,7 @@ export default function PostList({
         return (
             <div 
                 ref={(idx + 1 === posts.length - 10) && !username ? scrollRef : null} 
-                key={`${post.id}${Date.now()}`}
+                key={`${post.id}`}
             >
                 <Post post={post}/>
             </div>

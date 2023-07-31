@@ -5,8 +5,9 @@ import { IPostGridProps } from '@/types/props';
 import LoadingIndicator from '../../common/LoadingIndicator';
 import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 import { NextRouter, useRouter } from 'next/router';
+import ErrorIndicator from '@/common/ErrorIndicator';
 
-export default function PostGrid({ posts, getUserPosts }: IPostGridProps) {
+export default function PostGrid({ posts, getUserPosts, error }: IPostGridProps) {
     const router: NextRouter = useRouter();
     const { id } = router.query;
 
@@ -35,7 +36,7 @@ export default function PostGrid({ posts, getUserPosts }: IPostGridProps) {
                 {renderedPosts}
             </div>
             <div ref={ref}>
-                <LoadingIndicator />
+                {!error ? <LoadingIndicator /> : <ErrorIndicator error={error}/>}
             </div>
         </div>
     );

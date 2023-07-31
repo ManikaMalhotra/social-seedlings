@@ -1,5 +1,5 @@
 import { IErrorState } from '@/types/misc';
-import styles from './style.module.css'
+import styles from '@/styles/ErrorIndicator.module.css';
 import { usePostsStore } from '@/store/posts';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';

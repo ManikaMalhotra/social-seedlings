@@ -6,7 +6,7 @@ import PostList from "../PostList";
 import { useState } from "react";
 import ViewButton from "../ViewButton";
 
-export default function UserInformation({ user, posts, getUserPosts }: IUserInformationProps) {
+export default function UserInformation({ user, posts, getUserPosts, error }: IUserInformationProps) {
     const [view, setView] = useState<boolean>(true);
 
     return (
@@ -17,8 +17,8 @@ export default function UserInformation({ user, posts, getUserPosts }: IUserInfo
             </div>            
             {
                 view ? 
-                    <PostGrid posts={posts} getUserPosts={getUserPosts} /> : null
-                    // <PostList posts={posts} getPage={getUserPosts} username={user.username} />
+                    <PostGrid error={error} posts={posts} getUserPosts={getUserPosts} /> :
+                    <PostList error={error} posts={posts} getPage={getUserPosts} username={user.username} />
             }            
         </div>
     );

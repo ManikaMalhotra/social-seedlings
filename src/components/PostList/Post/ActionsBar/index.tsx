@@ -1,13 +1,10 @@
 import { AiFillHeart } from 'react-icons/ai';
 import { BiComment, BiHeart, BiShare } from 'react-icons/bi';
 import styles from '@/styles/ActionsBar.module.css';
-import { useState } from 'react';
 
-export default function ActionsBar() {
-    const [isLiked, setIsLiked] = useState(false);
-
+export default function ActionsBar({ isLiked, setLiked }: { isLiked: boolean, setLiked: (isLiked: boolean) => void }) {
     function handleLike() {
-        setIsLiked(!isLiked);
+        setLiked(!isLiked);
     }
 
     return (

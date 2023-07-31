@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PostImage from '@/common/PostImage';
 import ActionsBar from './ActionsBar';
+import InfoContainer from './InfoContainer';
 
 export default function Post({ post }: IPostProps) {
     return (
@@ -33,11 +34,7 @@ export default function Post({ post }: IPostProps) {
                 }}>
                     <PostImage post={post} />
                 </div>
-                <ActionsBar />
-                <div className={styles.post234Description}>
-                    <p className={styles.post234LikesCount}>{post.likesCount} likes</p>
-                    {!!post.description && <p className={styles.post234DescriptionPara}>{post.description}</p>}
-                </div>
+                <InfoContainer post={post} />                
             </div>
         </>
     );

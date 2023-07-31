@@ -17,8 +17,8 @@ export default function UserInformation({ user, posts, getUserPosts }: IUserInfo
             </div>            
             {
                 view ? 
-                    <PostGrid posts={posts} getUserPosts={getUserPosts}/> : 
-                    <PostList posts={posts} getPage={getUserPosts} username={user.username}/>
+                    <PostGrid posts={posts} getUserPosts={getUserPosts} /> : null
+                    // <PostList posts={posts} getPage={getUserPosts} username={user.username} />
             }            
         </div>
     );

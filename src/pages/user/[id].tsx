@@ -32,6 +32,7 @@ export default function UserPage() {
 
     const user = useUserStore(state => state.details);
     const posts = useUserStore(state => state.posts);
+    // const error = useUserStore(state => state.error);
 
     return (
         <>
